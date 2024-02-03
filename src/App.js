@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import Registration from "./User/Authorization/Registration";
 
 import { ToastContainer } from 'react-toastify';
+import Login from "./User/Authorization/Login";
 const Pages = styled.div`
   width: 100vw;
   height: 100vh;
@@ -34,7 +35,9 @@ function App() {
         
         </ToastContainer>
      <Routes>
-     <Route path="/" element={<Registration />} />
+     <Route path="/register" element={<Registration />} />
+     <Route path='/login' element={<Login/>}></Route>
+     
      </Routes>
 
       <Sidebar />
@@ -42,7 +45,7 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
 
-            <Route exact path="/home" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             
             <Route path="/team" element={<Team />} />
             <Route path="/calender" element={<Calender />} />
