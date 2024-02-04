@@ -10,7 +10,7 @@ const HomeComponent = () => {
     if (username === "" || username === null) {
       navigate("/login");
     }
-  }, []); 
+  }); 
 
   return <h1>Home</h1>;
 };

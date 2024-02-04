@@ -11,6 +11,7 @@ import Registration from "./User/Authorization/Registration";
 
 import { ToastContainer } from 'react-toastify';
 import Login from "./User/Authorization/Login";
+import Category from "./User/Pages/Category/Category";
 const Pages = styled.div`
   width: 100vw;
   height: 100vh;
@@ -45,7 +46,7 @@ function App() {
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
 
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             
             <Route path="/team" element={<Team />} />
             <Route path="/calender" element={<Calender />} />
@@ -57,6 +58,9 @@ function App() {
         </AnimatePresence>
       </Pages>
      
+
+      
+     {/* <Category/> */}
     </>
     
   );
