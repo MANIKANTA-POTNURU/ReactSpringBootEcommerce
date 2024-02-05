@@ -22,13 +22,13 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/user">Home</NavLink>
             </li>
             <li>
               <NavLink to="/user/category">Categories</NavLink>
             </li>
             <li>
-              <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/user/viewallproducts">Products</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
