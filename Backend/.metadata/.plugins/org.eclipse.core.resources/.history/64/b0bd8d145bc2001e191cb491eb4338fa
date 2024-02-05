@@ -1,0 +1,7 @@
+package com.example.demo.model;
+
+@Entity
+@Table(name="user_table")
+public class UserRegistration {
+
+}

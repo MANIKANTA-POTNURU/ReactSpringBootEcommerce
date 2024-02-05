@@ -1,0 +1,21 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.UserRegistration;
+import com.example.demo.repository.UserRegistrationRepo;
+
+@Service
+public class UserserviceImpl {
+	@Autowired
+	private UserRegistrationRepo registrationRepo;
+
+public String adduser(UserRegistration user)
+{
+	registrationRepo.save(user);
+	return "User Re"
+}
+	
+	
+}

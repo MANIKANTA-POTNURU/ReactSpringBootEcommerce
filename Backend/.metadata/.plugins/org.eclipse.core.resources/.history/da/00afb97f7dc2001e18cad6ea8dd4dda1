@@ -1,0 +1,14 @@
+package com.example.demo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.demo.model.UserRegistration;
+
+@Repository
+public interface UserRegistrationRepo extends JpaRepository<UserRegistration, Integer> 
+{
+	@Query("SELECT r FROM Register r WHERE r.uemail = :email")
+	Optional<Register> findByEmail(@Param("email") String email);
+	
+}

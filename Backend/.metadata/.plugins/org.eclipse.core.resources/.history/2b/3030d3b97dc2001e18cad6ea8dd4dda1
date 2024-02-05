@@ -1,0 +1,8 @@
+package com.example.demo.service;
+
+import com.example.demo.model.UserRegistration;
+
+public interface UserService {
+	public String adduser(UserRegistration user);
+	public UserRegistration checkuserlogin(String email)
+}

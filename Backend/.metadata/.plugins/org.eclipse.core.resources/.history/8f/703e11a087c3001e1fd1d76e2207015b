@@ -1,0 +1,9 @@
+package com.example.demo.model;
+
+@Entity
+@Getter
+@Setter
+@Table(name = "product_")
+public class Product {
+
+}
