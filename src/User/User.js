@@ -4,6 +4,7 @@ import Category from './Category/Category'
 import ProductsByCategory from './Products/ProductsByCategory'
 import { Route, Routes } from 'react-router'
 import Viewallproducts from './Products/Viewallproducts'
+import Cart from './Products/Cart'
 function User() {
   return (
     <div>
@@ -13,6 +14,7 @@ function User() {
           <Route path="/category" element={<Category/>} />
             <Route path="/viewproductsbycategory/:catid" element={<ProductsByCategory/>} />
             <Route path="/viewallproducts" element={<Viewallproducts/>} />
+            <Route path="/cart" element={<Cart/>} />
 
           </Routes>
     </div>
