@@ -41,7 +41,7 @@ function Login() {
                   toast.success('Successfully login as a user');
                   sessionStorage.setItem('uemail', uemail);
                   sessionStorage.setItem('uname', res.data.username);
-                  navigate('/home');
+                  navigate('/user/home');
               } 
               else {
                   toast.error('Please enter valid credentials');
@@ -55,9 +55,10 @@ function Login() {
       }    
   return (
    
-    <div className="row ">
-    <div className="offset-lg-3 col-lg-6 d-flex align-items-center justify-content-center vh-100" >
-        <form className="container" onSubmit={ProceedLogin}>
+    <div className="row justify-content-center">  
+  <div className="col-lg-12"> 
+    <div className="d-flex align-items-center justify-content-center vh-100">
+    <form className="container" onSubmit={ProceedLogin}>
             <div className="card">
                 <div className="card-header">
                     <h2>User Login</h2>
@@ -79,6 +80,7 @@ function Login() {
             </div>
         </form>
     </div>
+  </div>
 </div>
 
   )
