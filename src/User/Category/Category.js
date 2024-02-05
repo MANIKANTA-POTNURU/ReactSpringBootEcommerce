@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import EcommerceCard from './EcommerceCard';
+
 import { useNavigate } from 'react-router-dom';  // Make sure you import from 'react-router-dom'
 import axios from 'axios';
+import CatCard from './CatCard';
 
 function Category() {
   const [categories, setCategories] = useState([]);
@@ -24,13 +25,14 @@ function Category() {
   return (
     <div>
       <h2>E-commerce Categories</h2>
-      <Slider>
+      {/* <Slider> */}
         {categories.map((category) => (
           <div key={category.id} onClick={() => loadCategory(category.id)}>
-            <EcommerceCard title={category.categorytype} imageUrl={category.categoryimageurl} />
+            <CatCard title={category.categorytype} imageUrl={category.categoryimageurl} />
+            <CatCard/>
           </div>
         ))}
-      </Slider>
+      {/* </Slider> */}
     </div>
   );
 }

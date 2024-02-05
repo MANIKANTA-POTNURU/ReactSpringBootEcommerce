@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EcommerceCard = ({ title, imageUrl }) => {
+const CatCard = ({ title, imageUrl }) => {
   return (
     <div className="ecommerce-card">
       <img src={imageUrl} alt={title} />
@@ -9,4 +9,4 @@ const EcommerceCard = ({ title, imageUrl }) => {
   );
 };
 
-export default EcommerceCard;
+export default CatCard;

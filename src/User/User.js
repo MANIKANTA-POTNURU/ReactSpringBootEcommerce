@@ -2,13 +2,16 @@ import React from 'react'
 import Navbar from './Header/Navbar'
 import Category from './Category/Category'
 import ProductsByCategory from './Products/ProductsByCategory'
+import { Route, Routes } from 'react-router'
 function User() {
   return (
     <div>
     <Navbar/>
-    <Category/>
+    {/* <Category/> */}
           <Routes>
-            <Route path="/viewproductsbycategory:catid" element={<ProductsByCategory/>} />
+          <Route path="/category" element={<Category/>} />
+            <Route path="/viewproductsbycategory/:catid" element={<ProductsByCategory/>} />
+
           </Routes>
     </div>
   )
