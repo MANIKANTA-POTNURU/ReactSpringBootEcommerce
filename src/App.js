@@ -16,6 +16,7 @@ function App() {
      <Route path="/admin/*" element={<Admin />} />
      <Route path="/user/*" element={<User/>} />
      <Route path="/register" element={<Registration />} />
+     {/* jdcnfvmcf */}
      
      </Routes>
 

@@ -39,6 +39,7 @@ function Login() {
           } else {
               if (res.data.upassword === upassword) {
                   toast.success('Successfully login as a user');
+                  sessionStorage.setItem('uid', res.data.id);
                   sessionStorage.setItem('uemail', uemail);
                   sessionStorage.setItem('uname', res.data.username);
                   navigate('/user/home');

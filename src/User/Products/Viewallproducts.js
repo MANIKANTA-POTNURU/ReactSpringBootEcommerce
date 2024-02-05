@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 const Viewallproducts = () => {
 const[products, setProducts] =useState([]);
 useEffect(()=>{
@@ -13,6 +14,25 @@ useEffect(()=>{
     console.log(error);
   })
 },[])
+const addtocart = (id) => {
+  let userid = sessionStorage.getItem("uid");
+  if(userid === null || userid === ""){
+    alert("Please login first");
+  }
+  
+    else {
+      axios.put(`http://localhost:1234/${userid}/cart/${id}`)
+        .then((response) => {
+          toast.success('Product AddedTocartSuccessfully.');
+          console.log(response.data);
+        })
+        .catch((error) => {
+          // Handle error, if needed
+          console.error(error);
+        });
+    }
+    
+  }
   return (
     <div className="container mt-5">
       <div className="row">
@@ -25,7 +45,7 @@ useEffect(()=>{
                 <Card.Title>{product.productname}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
                 {/* <Card.Text className="text-muted">{product.price}</Card.Text> */}
-                <Button variant="primary">Add to Cart</Button>
+                <Button variant="primary" onClick={() => addtocart(product.productId)} >Add to Cart</Button>
               </Card.Body>
             </Card>
           </div>
